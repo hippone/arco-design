@@ -1,5 +1,6 @@
 import React from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { TransitionGroup } from 'react-transition-group';
+import ArcoCSSTransition from '../_util/CSSTransition';
 import { render } from '../_util/react-dom';
 import BaseNotification from '../_class/notification';
 import Notice from '../_class/notice';
@@ -22,6 +23,7 @@ export type ConfigProps = {
   getContainer?: () => HTMLElement;
   duration?: number;
   rtl?: boolean;
+  closable?: boolean;
 };
 
 let maxCount;
@@ -29,6 +31,7 @@ let prefixCls;
 let duration;
 let container;
 let rtl;
+let closable;
 
 export interface MessageType {
   (): void;
@@ -138,6 +141,9 @@ class Message extends BaseNotification {
     if (typeof options.rtl === 'boolean') {
       rtl = options.rtl;
     }
+    if (typeof options.closable === 'boolean') {
+      closable = options.closable;
+    }
     if (options.getContainer && options.getContainer() !== container) {
       container = options.getContainer();
       Object.values(messageInstance).forEach(({ instance }) => instance?.clear());
@@ -174,10 +180,12 @@ class Message extends BaseNotification {
       transitionTimeout: _transitionTimeout,
       prefixCls: _prefixCls,
       rtl: _rtl,
+      closable: _closable,
     } = this.props;
     const { notices, position } = this.state;
     const mergedPrefixCls = _prefixCls || prefixCls;
     const mergedRtl = !isUndefined(_rtl) ? _rtl : rtl;
+    const mergeClosable = !isUndefined(_closable) ? _closable : closable;
     const prefixClsMessage = mergedPrefixCls ? `${mergedPrefixCls}-message` : 'arco-message';
     const transitionTimeout = {
       enter: isNumber(_transitionTimeout?.enter) ? _transitionTimeout?.enter : 100,
@@ -189,17 +197,20 @@ class Message extends BaseNotification {
       <div className={classNames}>
         <TransitionGroup component={null}>
           {notices.map((notice) => (
-            <CSSTransition
+            <ArcoCSSTransition
               key={notice.id}
               timeout={transitionTimeout}
               classNames={transitionClassNames || `fadeMessage`}
               onExit={(e) => {
+                if (!e) return;
                 e.style.height = `${e.scrollHeight}px`;
               }}
               onExiting={(e) => {
+                if (!e) return;
                 e.style.height = 0;
               }}
               onExited={(e) => {
+                if (!e) return;
                 e.style.height = 0;
                 notice.onClose && notice.onClose();
               }}
@@ -212,8 +223,9 @@ class Message extends BaseNotification {
                 onClose={this.remove}
                 noticeType="message"
                 rtl={mergedRtl}
+                {...(isUndefined(mergeClosable) ? {} : { closable: mergeClosable })}
               />
-            </CSSTransition>
+            </ArcoCSSTransition>
           ))}
         </TransitionGroup>
       </div>

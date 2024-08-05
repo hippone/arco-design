@@ -16,16 +16,17 @@ In multiple mode, specify the `dragToSort` property to allow sort the entered va
 ```js
 import { Select, Message, Space } from '@arco-design/web-react';
 const Option = Select.Option;
-const options = ['Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen'];
+const options = ['Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen','a', 'b'];
 
 const App = () => {
   return (
     <Select
-      placeholder="Please select"
+      placeholder="Select city"
       style={{ width: 345 }}
       mode="multiple"
       dragToSort
       defaultValue={options.slice(0, 3)}
+      maxTagCount={3}
     >
       {options.map((option, index) => (
         <Option key={option} value={option}>

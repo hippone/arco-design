@@ -1,3 +1,27 @@
+## 2.63.0
+
+2024-06-11
+
+### 💎 Enhancement
+
+- reduce time complexity of InputTag([#2690](https://github.com/arco-design/arco-design/pull/2690))
+
+## 2.62.1
+
+2024-05-17
+
+### 🐛 BugFix
+
+- Fixed the bug where the maxTagCount.render property of the `InputTag` component reported an error.([#2684](https://github.com/arco-design/arco-design/pull/2684))
+
+## 2.62.0
+
+2024-04-26
+
+### 🆕 Feature
+
+- `InputTag` supports responsive Tag number([#2656](https://github.com/arco-design/arco-design/pull/2656))
+
 ## 2.59.0
 
 2024-01-19

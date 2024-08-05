@@ -1,3 +1,19 @@
+## 2.63.1
+
+2024-07-02
+
+### 💎 Enhancement
+
+- Optimize `findDOMNode` console warning([#2727](https://github.com/arco-design/arco-design/pull/2727))
+
+## 2.63.0
+
+2024-06-11
+
+### 💎 Enhancement
+
+- 优化 findDOMNode 逻辑([#2540](https://github.com/arco-design/arco-design/pull/2540))
+
 ## 2.59.0
 
 2024-01-19

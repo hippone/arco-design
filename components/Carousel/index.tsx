@@ -122,6 +122,7 @@ function Carousel(baseProps: CarouselProps, ref) {
   useImperativeHandle(carousel, () => {
     return {
       dom: refDom.current,
+      getRootDOMNode: () => refDom.current,
       goto: ({ index, isNegative, isManual, resetAutoPlayInterval }) => {
         slideTo({
           targetIndex: getValidIndex(index),
@@ -253,8 +254,26 @@ function Carousel(baseProps: CarouselProps, ref) {
       : null
   );
 
+  let [slideToPrev, slideToNext] = [
+    () =>
+      slideTo({
+        targetIndex: prevIndex,
+        isNegative: true,
+        isManual: true,
+      }),
+
+    () =>
+      slideTo({
+        targetIndex: nextIndex,
+        isManual: true,
+      }),
+  ];
+  if (rtl) {
+    [slideToPrev, slideToNext] = [slideToNext, slideToPrev];
+  }
+
   return (
-    <ResizeObserver onResize={computeStyle}>
+    <ResizeObserver onResize={computeStyle} getTargetDOMNode={() => refDom.current}>
       <div
         ref={(_ref) => {
           ref = _ref;
@@ -352,19 +371,8 @@ function Carousel(baseProps: CarouselProps, ref) {
             direction={direction}
             showArrow={showArrow}
             icons={icons}
-            prev={() =>
-              slideTo({
-                targetIndex: prevIndex,
-                isNegative: true,
-                isManual: true,
-              })
-            }
-            next={() =>
-              slideTo({
-                targetIndex: nextIndex,
-                isManual: true,
-              })
-            }
+            prev={slideToPrev}
+            next={slideToNext}
           />
         )}
       </div>

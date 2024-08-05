@@ -7,6 +7,7 @@ import React, {
   useRef,
   useEffect,
   ReactElement,
+  useMemo,
 } from 'react';
 import { pickDataAttributes } from '../_util/pick';
 import { isUndefined, isObject, isFunction } from '../_util/is';
@@ -22,9 +23,11 @@ import { ObjectValueType } from '../InputTag/interface';
 import { InputComponentProps } from '../Input/interface';
 import include from '../_util/include';
 import useForceUpdate from '../_util/hooks/useForceUpdate';
+import usePersistCallback from '../_util/hooks/usePersistCallback';
 import IconHover from './icon-hover';
 import { Backspace, Enter } from '../_util/keycode';
 import fillNBSP from '../_util/fillNBSP';
+import Tag from '../Tag';
 
 export interface SelectViewCommonProps
   extends Pick<InputTagProps<unknown>, 'animation' | 'renderTag' | 'dragToSort'> {
@@ -86,14 +89,15 @@ export interface SelectViewCommonProps
    */
   allowClear?: boolean;
   /**
-   * @zh 最多显示多少个 `tag`，仅在多选或标签模式有效。
-   * @en The maximum number of `tags` is displayed, only valid in `multiple` and `label` mode.
-   * @version Object type in 2.37.0
+   * @zh 最多显示多少个 `tag`，仅在多选或标签模式有效。设置 `responsive` 响应式显示标签数不建议在选项较多时使用，可能存在性能问题，
+   * @en The maximum number of `tags` is displayed, only valid in `multiple` and `label` mode. Setting the number of `responsive` responsive display tags is not recommended when there are many options, as there may be performance issues.
+   * @version Object type in 2.37.0. `responsive ` in `2.62.0`
    */
   maxTagCount?:
     | number
+    | 'responsive'
     | {
-        count: number;
+        count: number | 'responsive';
         render?: (invisibleTagCount: number) => ReactNode;
       };
   /**
@@ -184,10 +188,11 @@ const SearchStatus = {
   NONE: 2,
 };
 
-const MAX_TAG_COUNT_VALUE_PLACEHOLDER = '__arco_value_tag_placeholder';
+const DUMMY_TAG_COUNT = 1;
 
 export type SelectViewHandle = {
   dom: HTMLDivElement;
+  getRootDOMNode: () => HTMLDivElement;
   focus: () => void;
   blur: () => void;
   getWidth: () => number;
@@ -307,6 +312,7 @@ const CoreSelectView = React.forwardRef(
 
     useImperativeHandle<any, SelectViewHandle>(ref, () => ({
       dom: refWrapper.current,
+      getRootDOMNode: () => refWrapper.current,
       focus: handleFocus.bind(null, 'focus'),
       blur: handleFocus.bind(null, 'blur'),
       getWidth: () => refWrapper.current && refWrapper.current.clientWidth,
@@ -428,44 +434,67 @@ const CoreSelectView = React.forwardRef(
       );
     };
 
-    const renderMultiple = () => {
-      const usedValue = isUndefined(value) ? [] : [].concat(value as []);
-      const maxTagCountNumber = isObject(maxTagCount) ? maxTagCount.count : maxTagCount;
+    const renderTextFn = usePersistCallback(renderText);
 
-      const maxTagCountRender =
-        isObject(maxTagCount) && isFunction(maxTagCount.render)
-          ? maxTagCount.render
-          : (invisibleCount) => `+${invisibleCount}...`;
-
-      const usedMaxTagCount =
-        typeof maxTagCountNumber === 'number' ? Math.max(maxTagCountNumber, 0) : usedValue.length;
-      const tagsToShow: ObjectValueType[] = [];
-      let lastClosableTagIndex = -1;
-
-      for (let i = usedValue.length - 1; i >= 0; i--) {
-        const v = usedValue[i];
-        const result = renderText(v);
-        if (i < usedMaxTagCount) {
-          tagsToShow.unshift({
-            value: v,
-            label: result.text,
-            closable: !result.disabled,
-          });
-        }
-        if (!result.disabled && lastClosableTagIndex === -1) {
-          lastClosableTagIndex = i;
-        }
+    const tagsToShow = useMemo(() => {
+      if (!isMultiple) {
+        return [];
       }
+      const usedValue = isUndefined(value) ? [] : [].concat(value as []);
+      const tagsToShow: ObjectValueType[] = [];
+      const maxTagCountValue = isObject(maxTagCount) ? maxTagCount.count : maxTagCount;
+      const maxTagCountIsNumber = typeof maxTagCountValue === 'number';
 
-      const invisibleTagCount = usedValue.length - usedMaxTagCount;
-      if (invisibleTagCount > 0) {
+      // loop from start
+      for (let i = 0; i < usedValue.length; i++) {
+        if (maxTagCountIsNumber && tagsToShow.length >= maxTagCountValue + DUMMY_TAG_COUNT) {
+          break;
+        }
+        const v = usedValue[i];
+        const result = renderTextFn(v);
+
         tagsToShow.push({
-          label: maxTagCountRender(invisibleTagCount),
-          closable: false,
-          // InputTag needs to extract value as key
-          value: MAX_TAG_COUNT_VALUE_PLACEHOLDER,
+          value: v,
+          label: result.text,
+          closable: !result.disabled,
         });
       }
+      return tagsToShow;
+    }, [value, isMultiple, maxTagCount, renderTextFn]);
+
+    const renderMultiple = () => {
+      const usedValue = isUndefined(value) ? [] : [].concat(value as []);
+      const maxTagCountValue = isObject(maxTagCount) ? maxTagCount.count : maxTagCount;
+
+      const maxTagCountRender = (invisibleCount) => {
+        const dom =
+          isObject(maxTagCount) && isFunction(maxTagCount.render)
+            ? maxTagCount.render(invisibleCount)
+            : `+${invisibleCount}...`;
+
+        if (renderTag) {
+          // 执行 renderTag 逻辑。。 这里只是为了兼容以前 select-view 里会对 +x... 节点执行 renderTag 逻辑
+          // 可能不大合理，按理说 maxTagCount.render 就行，但这里要保持以前的行为不变。
+          return dom;
+        }
+
+        return (
+          <Tag className={cs(`${getPrefixCls('input-tag')}-tag`, `${prefixCls}-tag`)}>{dom}</Tag>
+        );
+      };
+
+      const findLastClosableTagIndex = () => {
+        // loop from end
+        for (let i = usedValue.length - 1; i >= 0; i--) {
+          const v = usedValue[i];
+          const result = renderTextFn(v);
+          if (!result.disabled) {
+            return i;
+          }
+        }
+
+        return -1;
+      };
 
       const eventHandlers = {
         onPaste: inputEventHandlers.paste,
@@ -476,7 +505,11 @@ const CoreSelectView = React.forwardRef(
         onRemove: (value, index, event) => {
           // Should always delete the last option value when press Backspace
           const keyCode = event.keyCode || event.which;
-          if (keyCode === Backspace.code && lastClosableTagIndex > -1) {
+          let lastClosableTagIndex = -1;
+          if (
+            keyCode === Backspace.code &&
+            (lastClosableTagIndex = findLastClosableTagIndex()) !== -1
+          ) {
             value = usedValue[lastClosableTagIndex];
             index = lastClosableTagIndex;
           }
@@ -514,18 +547,30 @@ const CoreSelectView = React.forwardRef(
           tagClassName={`${prefixCls}-tag`}
           renderTag={renderTag}
           icon={{ removeIcon }}
+          maxTagCount={
+            maxTagCount
+              ? {
+                  count: isObject(maxTagCount) ? maxTagCount.count : maxTagCount,
+                  render:
+                    maxTagCountValue === 'responsive'
+                      ? maxTagCountRender
+                      : () => maxTagCountRender(usedValue.length - maxTagCountValue),
+                  popoverProps: { disabled: true },
+                }
+              : undefined
+          }
           onChange={(newValue, reason) => {
             if (onSort && reason === 'sort') {
-              const indexOfMaxTagCount = newValue.indexOf(MAX_TAG_COUNT_VALUE_PLACEHOLDER);
-              // inject the invisible values tags to middle after dragging the "+x" tag
-              if (indexOfMaxTagCount > -1) {
-                const headArr = newValue.slice(0, indexOfMaxTagCount);
-                const tailArr = newValue.slice(indexOfMaxTagCount + 1);
-                const midArr = usedValue.slice(-invisibleTagCount);
-                onSort(headArr.concat(midArr, tailArr));
-              } else {
-                onSort(newValue);
-              }
+              // const indexOfMaxTagCount = newValue.indexOf(MAX_TAG_COUNT_VALUE_PLACEHOLDER);
+              // // inject the invisible values tags to middle after dragging the "+x" tag
+              // if (indexOfMaxTagCount > -1) {
+              //   const headArr = newValue.slice(0, indexOfMaxTagCount);
+              //   const tailArr = newValue.slice(indexOfMaxTagCount + 1);
+              //   const midArr = usedValue.slice(-invisibleTagCount);
+              //   onSort(headArr.concat(midArr, tailArr));
+              // } else {
+              // }
+              onSort(newValue);
             }
           }}
           {...eventHandlers}

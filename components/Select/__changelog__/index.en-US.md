@@ -1,3 +1,35 @@
+## 2.63.1
+
+2024-07-02
+
+### 🐛 BugFix
+
+- Fixed a bug where the selected item display was not updated in time when the `Select` component options changed (introduced in `2.63.0`)([#2732](https://github.com/arco-design/arco-design/pull/2732))
+
+## 2.63.0
+
+2024-06-11
+
+### 💎 Enhancement
+
+- Enhance the rendering performance of SelectView([#2690](https://github.com/arco-design/arco-design/pull/2690))
+
+### 🐛 BugFix
+
+- Fixed a bug in which the rendering node style is incorrect when `Select` renderTag and maxTagCount are used at the same time (introduced in `2.62.0`).([#2706](https://github.com/arco-design/arco-design/pull/2706))
+
+## 2.62.0
+
+2024-04-26
+
+### 💎 Enhancement
+
+- Optimize `Select` component focus control([#2657](https://github.com/arco-design/arco-design/pull/2657))
+
+### 🆕 Feature
+
+- `Select` supports responsive Tag number([#2656](https://github.com/arco-design/arco-design/pull/2656))
+
 ## 2.60.2
 
 2024-03-01

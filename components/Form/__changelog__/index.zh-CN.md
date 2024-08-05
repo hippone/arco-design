@@ -1,3 +1,21 @@
+## 2.62.1
+
+2024-05-17
+
+### 🐛 问题修复
+
+- 修复 `Form.Item` 未设置 rules 时，校验状态出现 validating 的 bug。([#2676](https://github.com/arco-design/arco-design/pull/2676))
+
+## 2.61.3
+
+2024-04-12
+
+### 🐛 问题修复
+
+- 修复 `Form` rtl 视图样式问题([#2635](https://github.com/arco-design/arco-design/pull/2635))
+- 修复 `Form.useFormContext` 组件 `isSubmitting` 有误的 bug。([#2631](https://github.com/arco-design/arco-design/pull/2631))
+- 修复 `Form` 组件 rules 未设置且 validate 方法 validateOnly 为 true 时报错问题([#2620](https://github.com/arco-design/arco-design/pull/2620))
+
 ## 2.61.0
 
 2024-03-15

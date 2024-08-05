@@ -1,3 +1,27 @@
+## 2.63.0
+
+2024-06-11
+
+### 💎 功能优化
+
+- 优化 InputTag 渲染逻辑，降低时间复杂度([#2690](https://github.com/arco-design/arco-design/pull/2690))
+
+## 2.62.1
+
+2024-05-17
+
+### 🐛 问题修复
+
+- 修复 `InputTag` 组件 maxTagCount.render 属性报错的 bug.([#2684](https://github.com/arco-design/arco-design/pull/2684))
+
+## 2.62.0
+
+2024-04-26
+
+### 🆕 功能升级
+
+- `InputTag` 支持响应式 Tag 数([#2656](https://github.com/arco-design/arco-design/pull/2656))
+
 ## 2.59.0
 
 2024-01-19

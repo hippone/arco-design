@@ -2,6 +2,91 @@
 changelog: true
 ---
 
+## 2.63.1
+
+2024-07-02
+
+### 💎 功能优化
+
+- 优化 `findDOMNode` 控制台 warning([#2727](https://github.com/arco-design/arco-design/pull/2727))
+
+### 🐛 问题修复
+
+- 修复 `Select` 组件 options 改变时，选中项展示未及时更新的 bug（`2.63.0` 引入）([#2732](https://github.com/arco-design/arco-design/pull/2732))
+- 移除 DatePicker 默认 placeholder "Please"([#2709](https://github.com/arco-design/arco-design/pull/2709))
+- 修复 `Avatar` 组件内部 img 元素存在空白的样式问题([#2692](https://github.com/arco-design/arco-design/pull/2692))
+
+## 2.63.0
+
+2024-06-11
+
+### 💎 功能优化
+
+- 优化 SelectView 渲染逻辑，避免选中多个结点时渲染卡顿([#2690](https://github.com/arco-design/arco-design/pull/2690))
+- 优化 InputTag 渲染逻辑，降低时间复杂度([#2690](https://github.com/arco-design/arco-design/pull/2690))
+- 整体优化 findDOMNode 逻辑，避免 API 废弃警告([#2540](https://github.com/arco-design/arco-design/pull/2540))
+
+### 🐛 问题修复
+
+- 修复 `Select` renderTag 和 maxTagCount 同时使用时渲染节点样式有误的 bug(`2.62.0` 引入)。([#2706](https://github.com/arco-design/arco-design/pull/2706))
+- 修复`Cascader`组件在搜索时， `ReactNode` 类型的`label`数据被转换成字符串的问题。([#2698](https://github.com/arco-design/arco-design/pull/2698))
+
+## 2.62.1
+
+2024-05-17
+
+### 🐛 问题修复
+
+- 修复 `InputTag` 组件 maxTagCount.render 属性报错的 bug.([#2684](https://github.com/arco-design/arco-design/pull/2684))
+- 修复 `Form.Item` 未设置 rules 时，校验状态出现 validating 的 bug。([#2676](https://github.com/arco-design/arco-design/pull/2676))
+
+## 2.62.0
+
+2024-04-26
+
+### 💎 功能优化
+
+- 优化 `Select` 组件焦点控制([#2657](https://github.com/arco-design/arco-design/pull/2657))
+
+### 🆕 功能升级
+
+- `Message.config` 支持 `closable` 参数([#2659](https://github.com/arco-design/arco-design/pull/2659))
+- `Select` 支持响应式 Tag 数([#2656](https://github.com/arco-design/arco-design/pull/2656))
+- `InputTag` 支持响应式 Tag 数([#2656](https://github.com/arco-design/arco-design/pull/2656))
+- `ColorPicker` 组件增加 `onChangeComplete` 和 `renderFooter` 属性([#2633](https://github.com/arco-design/arco-design/pull/2633))
+
+### 🐛 问题修复
+
+- 修复 `Typography.Ellipsis`  在 safari 下不显示的问题。因环境差异， safari 下为兼容显示([#2662](https://github.com/arco-design/arco-design/pull/2662))
+- 修复`Slider`组件输入负号触发`onChange`的值为`NaN`的问题。([#2660](https://github.com/arco-design/arco-design/pull/2660))
+- 修复`Tabs`组件的`ref`引用可能为`null`的问题。([#2660](https://github.com/arco-design/arco-design/pull/2660))
+- 修复 `Radio.Group` 设置 disabled 后，内部 Radio 的 `disabled` 配置无效的问题 。([#2653](https://github.com/arco-design/arco-design/pull/2653))
+
+## 2.61.3
+
+2024-04-12
+
+### 🐛 问题修复
+
+- 修复 `Form` rtl 视图样式问题([#2635](https://github.com/arco-design/arco-design/pull/2635))
+- 修复 `InputNumber` rtl 视图样式问题([#2635](https://github.com/arco-design/arco-design/pull/2635))
+- 修复 `Tree` 组件在 React 18 下边界场景出现折叠后的节点无法展开的 bug([#2634](https://github.com/arco-design/arco-design/pull/2634))
+- 修复 `Dropdown` 组件的全局 componentConfig 不生效的 bug([#2632](https://github.com/arco-design/arco-design/pull/2632))
+- 修复 `Form.useFormContext` 组件 `isSubmitting` 有误的 bug。([#2631](https://github.com/arco-design/arco-design/pull/2631))
+- 修复 `Form` 组件 rules 未设置且 validate 方法 validateOnly 为 true 时报错问题([#2620](https://github.com/arco-design/arco-design/pull/2620))
+- 修复 `Tooltip`组件在 rtl 下文本未对齐的 bug([#2618](https://github.com/arco-design/arco-design/pull/2618))
+
+## 2.61.2
+
+2024-03-29
+
+### 🐛 问题修复
+
+- 修复 `Watermark` 在像素比=1 时显示不完全的 bug。([#2614](https://github.com/arco-design/arco-design/pull/2614))
+- 修复 Carousel 在组件 rtl  视图下指示器表现异常的 bug。([#2605](https://github.com/arco-design/arco-design/pull/2605))
+- 修复 Carousel 组件 rtl 下 animation='card' 展示异常的 bug([#2605](https://github.com/arco-design/arco-design/pull/2605))
+- 修复 `Trigger` 在设置组件 `rtl` 时内容视图仍然是 `ltr` 的问题([#2604](https://github.com/arco-design/arco-design/pull/2604))
+
 ## 2.61.1
 
 2024-03-22

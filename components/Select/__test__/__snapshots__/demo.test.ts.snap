@@ -35,7 +35,7 @@ exports[`renders Select/demo/addbefore.md correctly 1`] = `
             <input
               autocomplete="off"
               class="arco-select-view-input"
-              placeholder="Please select"
+              placeholder="Select city"
               style="width:100%;pointer-events:none"
               tabindex="-1"
               value=""
@@ -43,13 +43,13 @@ exports[`renders Select/demo/addbefore.md correctly 1`] = `
             <span
               class="arco-select-view-value-mirror"
             >
-              Please select
+              Select city
             </span>
             <span
               class="arco-select-view-value"
               style="display:none"
             >
-              Please select
+              Select city
             </span>
           </span>
           <div
@@ -114,11 +114,14 @@ exports[`renders Select/demo/addbefore.md correctly 1`] = `
                 <input
                   autocomplete="off"
                   class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
+                  placeholder="Select city"
                   value=""
                 />
                 <span
                   class="arco-input-tag-input-mirror"
-                />
+                >
+                  Select city
+                </span>
               </div>
             </div>
           </div>
@@ -444,16 +447,21 @@ exports[`renders Select/demo/autoWidth.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-select-view-input"
+            placeholder="Select an item"
             style="width:100%"
             value=""
           />
           <span
             class="arco-select-view-value-mirror"
-          />
+          >
+            Select an item
+          </span>
           <span
             class="arco-select-view-value"
             style="display:none"
-          />
+          >
+            Select an item
+          </span>
         </span>
         <div
           aria-hidden="true"
@@ -508,16 +516,21 @@ exports[`renders Select/demo/autoWidth.md correctly 1`] = `
             <input
               autocomplete="off"
               class="arco-select-view-input"
+              placeholder="Select an item"
               style="width:100%"
               value=""
             />
             <span
               class="arco-select-view-value-mirror"
-            />
+            >
+              Select an item
+            </span>
             <span
               class="arco-select-view-value"
               style="display:none"
-            />
+            >
+              Select an item
+            </span>
           </span>
           <div
             aria-hidden="true"
@@ -583,20 +596,20 @@ exports[`renders Select/demo/autoWidth.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-select-view-input"
-            placeholder="Please select"
+            placeholder="Select an item"
             style="width:100%"
             value=""
           />
           <span
             class="arco-select-view-value-mirror"
           >
-            Please select
+            Select an item
           </span>
           <span
             class="arco-select-view-value"
             style="display:none"
           >
-            Please select
+            Select an item
           </span>
         </span>
         <div
@@ -652,20 +665,20 @@ exports[`renders Select/demo/autoWidth.md correctly 1`] = `
             <input
               autocomplete="off"
               class="arco-select-view-input"
-              placeholder="Please select"
+              placeholder="Select an item"
               style="width:100%"
               value=""
             />
             <span
               class="arco-select-view-value-mirror"
             >
-              Please select
+              Select an item
             </span>
             <span
               class="arco-select-view-value"
               style="display:none"
             >
-              Please select
+              Select an item
             </span>
           </span>
           <div
@@ -738,13 +751,13 @@ exports[`renders Select/demo/autoWidth.md correctly 1`] = `
               <input
                 autocomplete="off"
                 class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
-                placeholder="Please select"
+                placeholder="Select an item"
                 value=""
               />
               <span
                 class="arco-input-tag-input-mirror"
               >
-                Please select
+                Select an item
               </span>
             </div>
           </div>
@@ -808,13 +821,13 @@ exports[`renders Select/demo/autoWidth.md correctly 1`] = `
                 <input
                   autocomplete="off"
                   class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
-                  placeholder="Please select"
+                  placeholder="Select an item"
                   value=""
                 />
                 <span
                   class="arco-input-tag-input-mirror"
                 >
-                  Please select
+                  Select an item
                 </span>
               </div>
             </div>
@@ -876,7 +889,7 @@ exports[`renders Select/demo/basic.md correctly 1`] = `
             <input
               autocomplete="off"
               class="arco-select-view-input"
-              placeholder="Please select"
+              placeholder="Select city"
               style="width:100%;pointer-events:none"
               tabindex="-1"
               value=""
@@ -884,13 +897,13 @@ exports[`renders Select/demo/basic.md correctly 1`] = `
             <span
               class="arco-select-view-value-mirror"
             >
-              Please select
+              Select city
             </span>
             <span
               class="arco-select-view-value"
               style="display:none"
             >
-              Please select
+              Select city
             </span>
           </span>
           <div
@@ -1008,7 +1021,7 @@ exports[`renders Select/demo/basic.md correctly 1`] = `
             <input
               autocomplete="off"
               class="arco-select-view-input"
-              placeholder="Please select"
+              placeholder="Select city"
               style="width:100%;pointer-events:none"
               tabindex="-1"
               value=""
@@ -1016,13 +1029,13 @@ exports[`renders Select/demo/basic.md correctly 1`] = `
             <span
               class="arco-select-view-value-mirror"
             >
-              Please select
+              Select city
             </span>
             <span
               class="arco-select-view-value"
               style="display:none"
             >
-              Please select
+              Select city
             </span>
           </span>
           <div
@@ -1133,7 +1146,7 @@ exports[`renders Select/demo/clear.md correctly 1`] = `
       <input
         autocomplete="off"
         class="arco-select-view-input"
-        placeholder="Please select"
+        placeholder="Select"
         style="width:100%;pointer-events:none"
         tabindex="-1"
         value=""
@@ -1141,13 +1154,13 @@ exports[`renders Select/demo/clear.md correctly 1`] = `
       <span
         class="arco-select-view-value-mirror"
       >
-        Please select
+        Select
       </span>
       <span
         class="arco-select-view-value"
         style="display:none"
       >
-        Please select
+        Select
       </span>
     </span>
     <div
@@ -1203,7 +1216,7 @@ exports[`renders Select/demo/custom-popup-width.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-select-view-input"
-            placeholder="Please select"
+            placeholder="Select city"
             style="width:100%;pointer-events:none"
             tabindex="-1"
             value=""
@@ -1211,13 +1224,13 @@ exports[`renders Select/demo/custom-popup-width.md correctly 1`] = `
           <span
             class="arco-select-view-value-mirror"
           >
-            Please select
+            Select city
           </span>
           <span
             class="arco-select-view-value"
             style="display:none"
           >
-            Please select
+            Select city
           </span>
         </span>
         <div
@@ -1267,7 +1280,7 @@ exports[`renders Select/demo/custom-popup-width.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-select-view-input"
-            placeholder="Please select"
+            placeholder="Select city"
             style="width:100%;pointer-events:none"
             tabindex="-1"
             value=""
@@ -1275,13 +1288,13 @@ exports[`renders Select/demo/custom-popup-width.md correctly 1`] = `
           <span
             class="arco-select-view-value-mirror"
           >
-            Please select
+            Select city
           </span>
           <span
             class="arco-select-view-value"
             style="display:none"
           >
-            Please select
+            Select city
           </span>
         </span>
         <div
@@ -1661,13 +1674,13 @@ exports[`renders Select/demo/hide-selected-option.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
-            placeholder="Please select"
+            placeholder="Select an item"
             value=""
           />
           <span
             class="arco-input-tag-input-mirror"
           >
-            Please select
+            Select an item
           </span>
         </div>
       </div>
@@ -1692,6 +1705,630 @@ exports[`renders Select/demo/hide-selected-option.md correctly 1`] = `
             d="M39.6 17.443 24.043 33 8.487 17.443"
           />
         </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders Select/demo/maxTag.md correctly 1`] = `
+<div
+  class="arco-space arco-space-vertical"
+>
+  <div
+    class="arco-space-item"
+    style="margin-bottom:24px"
+  >
+    <div>
+      <div
+        class="arco-divider arco-divider-horizontal arco-divider-with-text arco-divider-with-text-left"
+        role="separator"
+      >
+        <span
+          class="arco-divider-text arco-divider-text-left"
+        >
+           最多显示三个 Tag 
+        </span>
+      </div>
+      <div
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="arco-select arco-select-multiple arco-select-show-search arco-select-size-default"
+        role="combobox"
+        style="width:350px"
+        tabindex="0"
+      >
+        <div
+          class="arco-select-view"
+          title=""
+        >
+          <div
+            class="arco-input-tag arco-input-tag-size-default"
+          >
+            <div
+              class="arco-input-tag-view"
+            >
+              <div
+                class="arco-input-tag-inner"
+              >
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                  title="label 0"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    label 0
+                  </span>
+                  <span
+                    aria-label="Close"
+                    class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="arco-icon arco-icon-close"
+                      fill="none"
+                      focusable="false"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                  title="label 1"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    label 1
+                  </span>
+                  <span
+                    aria-label="Close"
+                    class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="arco-icon arco-icon-close"
+                      fill="none"
+                      focusable="false"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                  title="label 2"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    label 2
+                  </span>
+                  <span
+                    aria-label="Close"
+                    class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="arco-icon arco-icon-close"
+                      fill="none"
+                      focusable="false"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    +1...
+                  </span>
+                </div>
+                <input
+                  autocomplete="off"
+                  class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
+                  placeholder=""
+                  value=""
+                />
+                <span
+                  class="arco-input-tag-input-mirror"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="arco-select-suffix"
+          >
+            <span
+              class="arco-icon-hover arco-select-clear-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="arco-icon arco-icon-close"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-width="4"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                />
+              </svg>
+            </span>
+            <div
+              class="arco-select-arrow-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="arco-icon arco-icon-down"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-width="4"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M39.6 17.443 24.043 33 8.487 17.443"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="arco-space-item"
+    style="margin-bottom:24px"
+  >
+    <div>
+      <div
+        class="arco-divider arco-divider-horizontal arco-divider-with-text arco-divider-with-text-left"
+        role="separator"
+      >
+        <span
+          class="arco-divider-text arco-divider-text-left"
+        >
+           最多显示三个 Tag，并自定义渲染省略节点 
+        </span>
+      </div>
+      <div
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="arco-select arco-select-multiple arco-select-show-search arco-select-size-default"
+        role="combobox"
+        style="width:350px"
+        tabindex="0"
+      >
+        <div
+          class="arco-select-view"
+          title=""
+        >
+          <div
+            class="arco-input-tag arco-input-tag-size-default"
+          >
+            <div
+              class="arco-input-tag-view"
+            >
+              <div
+                class="arco-input-tag-inner"
+              >
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                  title="label 0"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    label 0
+                  </span>
+                  <span
+                    aria-label="Close"
+                    class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="arco-icon arco-icon-close"
+                      fill="none"
+                      focusable="false"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                  title="label 1"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    label 1
+                  </span>
+                  <span
+                    aria-label="Close"
+                    class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="arco-icon arco-icon-close"
+                      fill="none"
+                      focusable="false"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                  title="label 2"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    label 2
+                  </span>
+                  <span
+                    aria-label="Close"
+                    class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="arco-icon arco-icon-close"
+                      fill="none"
+                      focusable="false"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                >
+                  <span
+                    class="arco-tag-content"
+                  >
+                    +1
+                  </span>
+                </div>
+                <input
+                  autocomplete="off"
+                  class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
+                  placeholder=""
+                  value=""
+                />
+                <span
+                  class="arco-input-tag-input-mirror"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="arco-select-suffix"
+          >
+            <span
+              class="arco-icon-hover arco-select-clear-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="arco-icon arco-icon-close"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-width="4"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                />
+              </svg>
+            </span>
+            <div
+              class="arco-select-arrow-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="arco-icon arco-icon-down"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-width="4"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M39.6 17.443 24.043 33 8.487 17.443"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="arco-space-item"
+  >
+    <div>
+      <div
+        class="arco-divider arco-divider-horizontal arco-divider-with-text arco-divider-with-text-left"
+        role="separator"
+      >
+        <span
+          class="arco-divider-text arco-divider-text-left"
+        >
+           根据 select 宽度自适应渲染 Tag 个数 
+        </span>
+      </div>
+      <div
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="arco-select arco-select-multiple arco-select-show-search arco-select-size-default"
+        role="combobox"
+        style="width:350px"
+        tabindex="0"
+      >
+        <div
+          class="arco-select-view"
+          title=""
+        >
+          <div
+            class="arco-input-tag arco-input-tag-size-default"
+          >
+            <div
+              class="arco-input-tag-view"
+            >
+              <div
+                class="arco-input-tag-inner"
+              >
+                <div
+                  class="arco-overflow"
+                >
+                  <div
+                    class="arco-overflow-item"
+                  >
+                    <div
+                      class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                      title="label 0"
+                    >
+                      <span
+                        class="arco-tag-content"
+                      >
+                        label 0
+                      </span>
+                      <span
+                        aria-label="Close"
+                        class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arco-icon arco-icon-close"
+                          fill="none"
+                          focusable="false"
+                          stroke="currentColor"
+                          stroke-width="4"
+                          viewBox="0 0 48 48"
+                        >
+                          <path
+                            d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="arco-overflow-item"
+                  >
+                    <div
+                      class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                      title="label 1"
+                    >
+                      <span
+                        class="arco-tag-content"
+                      >
+                        label 1
+                      </span>
+                      <span
+                        aria-label="Close"
+                        class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arco-icon arco-icon-close"
+                          fill="none"
+                          focusable="false"
+                          stroke="currentColor"
+                          stroke-width="4"
+                          viewBox="0 0 48 48"
+                        >
+                          <path
+                            d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="arco-overflow-item"
+                  >
+                    <div
+                      class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                      title="label 2"
+                    >
+                      <span
+                        class="arco-tag-content"
+                      >
+                        label 2
+                      </span>
+                      <span
+                        aria-label="Close"
+                        class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arco-icon arco-icon-close"
+                          fill="none"
+                          focusable="false"
+                          stroke="currentColor"
+                          stroke-width="4"
+                          viewBox="0 0 48 48"
+                        >
+                          <path
+                            d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="arco-overflow-item"
+                  >
+                    <div
+                      class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
+                      title="label 3"
+                    >
+                      <span
+                        class="arco-tag-content"
+                      >
+                        label 3
+                      </span>
+                      <span
+                        aria-label="Close"
+                        class="arco-icon-hover arco-tag-icon-hover arco-tag-close-btn"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arco-icon arco-icon-close"
+                          fill="none"
+                          focusable="false"
+                          stroke="currentColor"
+                          stroke-width="4"
+                          viewBox="0 0 48 48"
+                        >
+                          <path
+                            d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="arco-overflow-item arco-overflow-suffix-item"
+                  >
+                    <input
+                      autocomplete="off"
+                      class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
+                      placeholder=""
+                      value=""
+                    />
+                    <span
+                      class="arco-input-tag-input-mirror"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="arco-select-suffix"
+          >
+            <span
+              class="arco-icon-hover arco-select-clear-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="arco-icon arco-icon-close"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-width="4"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M9.857 9.858 24 24m0 0 14.142 14.142M24 24 38.142 9.858M24 24 9.857 38.142"
+                />
+              </svg>
+            </span>
+            <div
+              class="arco-select-arrow-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="arco-icon arco-icon-down"
+                fill="none"
+                focusable="false"
+                stroke="currentColor"
+                stroke-width="4"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="M39.6 17.443 24.043 33 8.487 17.443"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1930,7 +2567,6 @@ exports[`renders Select/demo/multiple.md correctly 1`] = `
               </div>
               <div
                 class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
-                title="+1..."
               >
                 <span
                   class="arco-tag-content"
@@ -2080,7 +2716,6 @@ exports[`renders Select/demo/multiple.md correctly 1`] = `
               </div>
               <div
                 class="arco-tag arco-tag-checked arco-tag-size-default arco-input-tag-tag arco-select-tag"
-                title="+1 more"
               >
                 <span
                   class="arco-tag-content"
@@ -2256,7 +2891,7 @@ exports[`renders Select/demo/no-border.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-select-view-input"
-            placeholder="Please select"
+            placeholder="Select city"
             style="width:100%;pointer-events:none"
             tabindex="-1"
             value=""
@@ -2264,13 +2899,13 @@ exports[`renders Select/demo/no-border.md correctly 1`] = `
           <span
             class="arco-select-view-value-mirror"
           >
-            Please select
+            Select city
           </span>
           <span
             class="arco-select-view-value"
             style="display:none"
           >
-            Please select
+            Select city
           </span>
         </span>
         <div
@@ -2323,7 +2958,7 @@ exports[`renders Select/demo/no-border.md correctly 1`] = `
             autocomplete="off"
             class="arco-select-view-input arco-select-hidden"
             disabled=""
-            placeholder="Please select"
+            placeholder="Select city"
             style="width:100%;pointer-events:none"
             tabindex="-1"
             value=""
@@ -3389,20 +4024,20 @@ exports[`renders Select/demo/size.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-select-view-input"
-            placeholder="Please select"
+            placeholder="Select city"
             style="width:100%"
             value=""
           />
           <span
             class="arco-select-view-value-mirror"
           >
-            Please select
+            Select city
           </span>
           <span
             class="arco-select-view-value"
             style="display:none"
           >
-            Please select
+            Select city
           </span>
         </span>
         <div
@@ -3455,13 +4090,13 @@ exports[`renders Select/demo/size.md correctly 1`] = `
               <input
                 autocomplete="off"
                 class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
-                placeholder="Please select"
+                placeholder="Select cities"
                 value=""
               />
               <span
                 class="arco-input-tag-input-mirror"
               >
-                Please select
+                Select cities
               </span>
             </div>
           </div>
@@ -3520,13 +4155,13 @@ exports[`renders Select/demo/token-separators.md correctly 1`] = `
           <input
             autocomplete="off"
             class="arco-input-tag-input arco-input-tag-input-size-default arco-input-tag-input-autowidth"
-            placeholder="Please select"
+            placeholder="Select cities"
             value=""
           />
           <span
             class="arco-input-tag-input-mirror"
           >
-            Please select
+            Select cities
           </span>
         </div>
       </div>

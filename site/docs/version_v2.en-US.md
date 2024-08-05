@@ -2,6 +2,91 @@
 changelog: true
 ---
 
+## 2.63.1
+
+2024-07-02
+
+### 💎 Enhancement
+
+- Optimize `findDOMNode` console warning([#2727](https://github.com/arco-design/arco-design/pull/2727))
+
+### 🐛 BugFix
+
+- Fixed a bug where the selected item display was not updated in time when the `Select` component options changed (introduced in `2.63.0`)([#2732](https://github.com/arco-design/arco-design/pull/2732))
+- DatePicker default placeholder remove "Please"([#2709](https://github.com/arco-design/arco-design/pull/2709))
+- Prevent phantom space in avatar image([#2692](https://github.com/arco-design/arco-design/pull/2692))
+
+## 2.63.0
+
+2024-06-11
+
+### 💎 Enhancement
+
+- Enhance the rendering performance of SelectView([#2690](https://github.com/arco-design/arco-design/pull/2690))
+- reduce time complexity of InputTag([#2690](https://github.com/arco-design/arco-design/pull/2690))
+- 优化 findDOMNode 逻辑([#2540](https://github.com/arco-design/arco-design/pull/2540))
+
+### 🐛 BugFix
+
+- Fixed a bug in which the rendering node style is incorrect when `Select` renderTag and maxTagCount are used at the same time (introduced in `2.62.0`).([#2706](https://github.com/arco-design/arco-design/pull/2706))
+- Fix the issue where the `label` data of type `ReactNode` in the `Cascader` component is converted to a string during search.([#2698](https://github.com/arco-design/arco-design/pull/2698))
+
+## 2.62.1
+
+2024-05-17
+
+### 🐛 BugFix
+
+- Fixed the bug where the maxTagCount.render property of the `InputTag` component reported an error.([#2684](https://github.com/arco-design/arco-design/pull/2684))
+- Fix the bug that the verification status appears validating when rules are not set in `Form.Item`([#2676](https://github.com/arco-design/arco-design/pull/2676))
+
+## 2.62.0
+
+2024-04-26
+
+### 💎 Enhancement
+
+- Optimize `Select` component focus control([#2657](https://github.com/arco-design/arco-design/pull/2657))
+
+### 🆕 Feature
+
+- `Message.config` supports `closable` parameter([#2659](https://github.com/arco-design/arco-design/pull/2659))
+- `Select` supports responsive Tag number([#2656](https://github.com/arco-design/arco-design/pull/2656))
+- `InputTag` supports responsive Tag number([#2656](https://github.com/arco-design/arco-design/pull/2656))
+- `ColorPicker` component adds `onChangeComplete` and `renderFooter` properties([#2633](https://github.com/arco-design/arco-design/pull/2633))
+
+### 🐛 BugFix
+
+- Fix the problem that `Typography.Ellipsis` is not displayed in safari. Due to environmental differences, compatibility is displayed under safari.([#2662](https://github.com/arco-design/arco-design/pull/2662))
+- Fixed the issue where entering a minus sign in the Slider component triggered an onChange value of NaN.([#2660](https://github.com/arco-design/arco-design/pull/2660))
+- Fixed the issue where the ref reference in the Tabs component could be null.([#2660](https://github.com/arco-design/arco-design/pull/2660))
+- Fixed the issue where the `disabled` configuration of the internal Radio is invalid after `Radio.Group` is set to disabled.([#2653](https://github.com/arco-design/arco-design/pull/2653))
+
+## 2.61.3
+
+2024-04-12
+
+### 🐛 BugFix
+
+- Fix `Form` rtl view style issue([#2635](https://github.com/arco-design/arco-design/pull/2635))
+- Fix `InputNumber` rtl view style issue([#2635](https://github.com/arco-design/arco-design/pull/2635))
+- Fixed the bug where the collapsed nodes of the `Tree` component in the lower boundary scene of React 18 cannot be expanded.([#2634](https://github.com/arco-design/arco-design/pull/2634))
+- Fix the bug that the global componentConfig of the `Dropdown` component does not take effect([#2632](https://github.com/arco-design/arco-design/pull/2632))
+- Fix the bug that `Form.useFormContext` component `isSubmitting` is incorrect.([#2631](https://github.com/arco-design/arco-design/pull/2631))
+- Fixed an error issue when `Form` component rules is not set and validate method validateOnly is true([#2620](https://github.com/arco-design/arco-design/pull/2620))
+- Fix the bug of text misalignment in `Tooltip` component under rtl([#2618](https://github.com/arco-design/arco-design/pull/2618))
+
+## 2.61.2
+
+2024-03-29
+
+### 🐛 BugFix
+
+- Fix the bug of incomplete display of `Watermark` when pixel ratio=1.([#2614](https://github.com/arco-design/arco-design/pull/2614))
+- Fixed the bug where the Carousel indicator behaved abnormally in the component rtl view.([#2605](https://github.com/arco-design/arco-design/pull/2605))
+- Fixed the bug of abnormal display of animation='card' under Carousel component rtl([#2605](https://github.com/arco-design/arco-design/pull/2605))
+- Fix the issue where the content view of `Trigger` is still `ltr` when setting the component `rtl`([#2604](https://github.com/arco-design/arco-design/pull/2604))
+
 ## 2.61.1
 
 2024-03-22

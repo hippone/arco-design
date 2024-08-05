@@ -1,3 +1,35 @@
+## 2.63.1
+
+2024-07-02
+
+### 🐛 问题修复
+
+- 修复 `Select` 组件 options 改变时，选中项展示未及时更新的 bug（`2.63.0` 引入）([#2732](https://github.com/arco-design/arco-design/pull/2732))
+
+## 2.63.0
+
+2024-06-11
+
+### 💎 功能优化
+
+- 优化 SelectView 渲染逻辑，避免选中多个结点时渲染卡顿([#2690](https://github.com/arco-design/arco-design/pull/2690))
+
+### 🐛 问题修复
+
+- 修复 `Select` renderTag 和 maxTagCount 同时使用时渲染节点样式有误的 bug(`2.62.0` 引入)。([#2706](https://github.com/arco-design/arco-design/pull/2706))
+
+## 2.62.0
+
+2024-04-26
+
+### 💎 功能优化
+
+- 优化 `Select` 组件焦点控制([#2657](https://github.com/arco-design/arco-design/pull/2657))
+
+### 🆕 功能升级
+
+- `Select` 支持响应式 Tag 数([#2656](https://github.com/arco-design/arco-design/pull/2656))
+
 ## 2.60.2
 
 2024-03-01
